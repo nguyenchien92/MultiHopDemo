@@ -6,6 +6,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+import com.example.nguyen.multihopdemo.fragments.FragmentContent;
+
+
 public class MainActivity extends AppCompatActivity {
 
     private FrameLayout frameMain;
@@ -19,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction
-                .replace(R.id.frame_main,new LoginFragment(),LoginFragment.class.getSimpleName())
+                .replace(R.id.frame_main,new FragmentContent(),FragmentContent.class.getSimpleName())
                 .commit();
 
     }

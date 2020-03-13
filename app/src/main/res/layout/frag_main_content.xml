@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Connection Status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+<!--        <Button-->
+<!--            android:id="@+id/bt_wifi_on_off"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:text="WIFI ON" />-->
+
+        <Button
+            android:id="@+id/bt_discover"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="DISCOVER" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/rv_list_peers"
+        android:padding="7dp"
+        tools:listitem="@layout/item_peer"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:id="@+id/tv_read_msg"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:id="@+id/ed_send"
+            android:hint="Enter mess"
+            android:paddingStart="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="SEND"
+            android:id="@+id/bt_send"/>
+    </LinearLayout>
+
+</LinearLayout>
