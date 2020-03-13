@@ -1,5 +1,6 @@
 package com.example.nguyen.multihopdemo.models;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +15,7 @@ public class WifiDirectBroadCastReceiver extends BroadcastReceiver {
     private WifiP2pManager wifiP2pManager;
     private WifiP2pManager.Channel channel;
     private PeerListListener mListener;
+//    private Activity activity;
 
 
     public WifiDirectBroadCastReceiver(Context context, WifiP2pManager wifiP2pManager
@@ -22,6 +24,7 @@ public class WifiDirectBroadCastReceiver extends BroadcastReceiver {
         this.wifiP2pManager = wifiP2pManager;
         this.channel = channel;
         this.mListener = mListener;
+//        this.activity = activity;
     }
 
     @Override
@@ -31,6 +34,7 @@ public class WifiDirectBroadCastReceiver extends BroadcastReceiver {
             //do something...
             int state = intent.getIntExtra(WifiP2pManager.EXTRA_WIFI_STATE, -1);
             if (state == WifiP2pManager.WIFI_P2P_STATE_ENABLED) {
+//                activity.setIsWifiP2pEnabled(true);
                 Toast.makeText(this.context, "Wifi is ON", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this.context, "Wifi is OFF", Toast.LENGTH_SHORT).show();
